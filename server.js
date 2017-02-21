@@ -5,6 +5,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var path = require('path');
 
 // configuration ===========================================
 
@@ -21,6 +22,7 @@ var port = process.env.PORT || 8080;
 // get all data/stuff of the body (POST) parameters
 // parse application/json
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'app')));
 
 // parse application/vnd.api+json as json
 app.use(bodyParser.json({
