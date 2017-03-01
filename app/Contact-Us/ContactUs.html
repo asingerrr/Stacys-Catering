@@ -29,15 +29,12 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" <div class="logo">
-                    <!-- <img src="cater.png" class="pull-left" alt="Logo" width="400" height="400"> -->
-            </div>
-            </a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
 
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-center">
+              <div class = "cater">
+            <img src="Stacy's1.png" alt="cater" width="350" height="260">
+            </div>
                 <li><a href="/index.html">HOME</a> </li>
                 <li><a href="/About/about.html">ABOUT</a></li>
                 <li><a href="/Order-Online/OrderOnline.html">ORDER ONLINE</a></li>
@@ -54,8 +51,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-12">
-                    <h1u class="h1c">
-                        Contact Us </h1u>
+                    <h1u class="h1c"> Contact Us </h1u>
                 </div>
             </div>
         </div>
@@ -69,13 +65,11 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="name">
-                                    Name</label>
+                                    <label for="name"> Name </label>
                                     <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">
-                                    Email Address</label>
+                                    <label for="email"> Email Address</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                         </span>
@@ -103,19 +97,43 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="name">
-                                    Message</label>
-
-                                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Enter Message"></textarea>
+                                    <label for="name"> Message</label>
+                                    <textarea name="message" id="message" class="form-control" rows="13" cols="25" required="required" placeholder="Enter Message"></textarea>
                                 </div>
                             </div>
-                            <div class="button">
-                                <button type="submit" class="btn btn-success pull-center" id="btnContactUs">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-success btn-lg pull-right RbtnMargin" id="ContactButton">
                                 Send Message</button>
                             </div>
                         </div>
                     </form>
                 </div>
+                <!-- <div class="col-md-4">
+                               <span class="glyphicon glyphicon-map-marker"></span>
+                               <p1> Address: 4317 Creekside Pass Zionsville, IN 46077 </p1>
+                               <span class="glyphicon glyphicon-phone"></span>
+                            <h2cu> Phone Number: (317)-626-6971 </h2cu>
+                          </div> -->
+                <!-- Google Maps API-->
+                <div id="googleMap" style="height:500px; width:1100px;"></div>
+                <script>
+                    function initMap() {
+                        var myCenter = new google.maps.LatLng(39.9617911, -86.273442);
+                        var mapProp = {
+                            center: myCenter,
+                            zoom: 12,
+                            scrollwheel: false,
+                            draggable: true,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+                        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                        var marker = new google.maps.Marker({
+                            position: myCenter
+                        });
+                        marker.setMap(map);
+                    }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw3QVljVdk8JQtKv7oC_-BQ3lUbgn_A_Q&callback=initMap"></script>
             </div>
 
 </body>
