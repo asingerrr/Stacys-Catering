@@ -10,10 +10,10 @@ var path = require('path');
 // configuration ===========================================
 
 // config files
-var db = require('./config/db');
+//var db = require('./config/db');
 
 // set our port
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 9000;
 
 // connect to our mongoDB database
 // (uncomment after you enter in your own credentials in config/db.js)
